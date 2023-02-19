@@ -1,5 +1,6 @@
 import 'package:dribbleui/configs/SizeConfig.dart';
 import 'package:dribbleui/configs/StyleConfig.dart';
+import 'package:dribbleui/screens/SettingsScreen.dart';
 import 'package:dribbleui/widgets/BoldText.dart';
 import 'package:dribbleui/widgets/GridContainersWidget.dart';
 import 'package:flutter/material.dart';
@@ -11,12 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    List<Color> list = [
-      Colors.blue,
-      Colors.orange,
-      Colors.red,
-      Colors.yellow,
-    ];
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -96,6 +92,16 @@ class HomeScreen extends StatelessWidget {
                     )))
           ]),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => const SettingsScreen(),
+            ),
+          );
+        }),
+        child: const Icon(Icons.settings),
       ),
     );
   }

@@ -10,3 +10,11 @@ TextStyle kQuestrialMedium = GoogleFonts.questrial(fontWeight: FontWeight.w500);
 
 TextStyle kQuestrialRegular =
     GoogleFonts.questrial(fontWeight: FontWeight.w400);
+
+// dummy data for colors of grid
+List<Color> list = [
+  Colors.blue,
+  Colors.orange,
+  Colors.red,
+  Colors.yellow,
+];

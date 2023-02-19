@@ -24,7 +24,7 @@ class GridContainersWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: color.withOpacity(0.2),
+          color: color.withOpacity(0.1),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
