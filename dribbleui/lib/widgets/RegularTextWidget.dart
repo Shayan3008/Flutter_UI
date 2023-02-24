@@ -6,14 +6,18 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class RegularTextWidget extends StatelessWidget {
   final String text;
-  const RegularTextWidget({super.key, required this.text});
+  final double? size;
+  const RegularTextWidget({super.key, required this.text, this.size});
 
   @override
   Widget build(BuildContext context) {
+    print(text);
     return Text(
       text,
       style: kQuestrialRegular.copyWith(
-          fontSize: SizeConfig.horizantalAspect! * 4.5),
+          fontSize: size == null
+              ? SizeConfig.horizantalAspect! * 4.5
+              : SizeConfig.horizantalAspect! * size!),
     );
   }
 }

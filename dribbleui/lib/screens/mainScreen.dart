@@ -29,9 +29,6 @@ class _MainScreenState extends State<MainScreen>
   @override
   Widget build(BuildContext context) {
     return DrawerAnimation(
-      widget1: DrawerWidget(
-        controller: _controller,
-      ),
       widget2: const HomeScreen(),
       controller: _controller,
     );

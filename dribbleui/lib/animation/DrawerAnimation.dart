@@ -1,23 +1,23 @@
+import 'package:dribbleui/widgets/Drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 
 class DrawerAnimation extends StatelessWidget {
-  final Widget widget1;
   final Widget widget2;
   final AnimationController controller;
   const DrawerAnimation(
-      {super.key,
-      required this.widget1,
-      required this.widget2,
-      required this.controller});
+      {super.key, required this.widget2, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        widget1,
+        DrawerWidget(controller: controller),
         GestureDetector(
-          onTap: () => controller.forward(),
+          onTap: () => {
+            print('Hello World'),
+            controller.forward(),
+          },
           child: AnimatedBuilder(
             animation: controller,
             builder: (context, child) => Transform.scale(

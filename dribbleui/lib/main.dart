@@ -1,5 +1,6 @@
 import 'package:dribbleui/animation/DrawerAnimation.dart';
 import 'package:dribbleui/screens/HomeScreen.dart';
+import 'package:dribbleui/screens/Profile.dart';
 import 'package:dribbleui/screens/mainScreen.dart';
 import 'package:dribbleui/widgets/Drawer.dart';
 import 'package:flutter/material.dart';
@@ -19,12 +20,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const MainScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MainScreen(),
+    );
   }
 }
 

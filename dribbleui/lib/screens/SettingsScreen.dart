@@ -1,6 +1,7 @@
 import 'package:dribbleui/configs/SizeConfig.dart';
 import 'package:dribbleui/widgets/BoldText.dart';
 import 'package:dribbleui/widgets/RegularTextWidget.dart';
+import 'package:dribbleui/widgets/TextList.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -39,41 +40,13 @@ class SettingsScreen extends StatelessWidget {
               SizedBox(
                 height: SizeConfig.verticalAspect! * 3,
               ),
-              Row(
-                children: [
-                  RegularTextWidget(text: 'Add account'),
-                ],
-              ),
-              SizedBox(
-                height: SizeConfig.verticalAspect! * 3,
-              ),
-              Row(
-                children: [
-                  RegularTextWidget(text: 'Change password'),
-                ],
-              ),
-              SizedBox(
-                height: SizeConfig.verticalAspect! * 3,
-              ),
-              Row(
-                children: [
-                  RegularTextWidget(text: 'Change plan'),
-                ],
-              ),
-              SizedBox(
-                height: SizeConfig.verticalAspect! * 3,
-              ),
-              Row(
-                children: [
-                  RegularTextWidget(text: 'Upgrade plan'),
-                ],
-              ),
-              SizedBox(
-                height: SizeConfig.verticalAspect! * 3,
-              ),
-              Row(
-                children: [
-                  RegularTextWidget(text: 'Multiple Account'),
+              const TextListWidget(
+                list1: [
+                  'Add account',
+                  'Change Password',
+                  'Change Plan',
+                  'Upgrade plan',
+                  'Multiple Account'
                 ],
               ),
               SizedBox(
